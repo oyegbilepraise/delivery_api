@@ -39,10 +39,9 @@ app.post('/get_delivery_order', async (req, res) => {
                 let a = response.data.order
                 let phone = a.phone_no
                 let total_amount = a.total_price.total_amount
-                "Shop your favourite items :shopping_trolley: from any of our over 10,000 verified merchants and stores :point_down::skin-tone-5:\n\n*[1]* I have a merchant on Sell\n*[2]* Explore other stores\n\nType *return* to go back to main menu  :man-running::skin-tone-5:"
                 let msg = {
                     status: true,
-                    message: phone + '\n' + total_amount + '\n' + 'Type' + '[1] To Confirm' + ' ' + '*[2]* To Edit' + ' ' + '*[3]* To Cancel' + '\n' + '*[m]* main menu'
+                    message: '🛒: Finally create your Customer"s order:' + '\n' + '==============='+ '\n' + '☎️ ' +phone + '\n' + '===============' + '\n' + '💵 ' + total_amount + '===============' + '\n' + 'Type 👇🏿' + '*[1]* To Confirm' + ' ' + '*[2]* To Edit' + ' ' + '*[3]* To Cancel' + '\n' + '*[m]* main menu'
                 }
                 res.json(msg)
             }
